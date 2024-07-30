@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Admission - École Supérieure</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="esi.jpg" alt="Logo de l'École Supérieure">
+        <h1>École Supérieure d'Informatique</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html"><strong>Accueil</strong></a></li>
+            <li><a href="page2.html"><strong>Académique</strong></a></li>
+            <li><a href="page3.html"><strong>Admission</strong></a></li>
+            <li><a href="page4.html"><strong>Galerie</strong></a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Formulaire d'Admission</h1>
+        <form action="/submit_admission" method="post" id="myform">
+            <label for="nom"><strong>Nom:</strong></label>
+            <input type="text" id="nom" name="nom" required><br><br>
+            <label for="prenom"><strong>Prénom:</strong></label>
+            <input type="text" id="prenom" name="prenom" required><br><br>
+            <label for="date_naissance"><strong>Date de Naissance:</strong></label>
+            <input type="date" id="date_naissance" name="date_naissance" required><br><br>
+            <label for="email"><strong>Email:</strong></label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="telephone"><strong>Téléphone:</strong></label>
+            <input type="tel" id="telephone" name="telephone" required><br><br>
+            <input type="submit" value="Soumettre">
+        </form>
+        <div id="message"></div>
+        <script>
+            document.getElementById('myform').addEventListener('submit',function(event){
+                event.preventDefault();
+                document.getElementById('message').innerText='Merci pour votre soumission'
+            });
+        </script>
+    </main>
+    <footer>
+        <p>&copy;2024 Ecole Superieure d'Informaique</p>
+    </footer>
+</body>
+</html>
